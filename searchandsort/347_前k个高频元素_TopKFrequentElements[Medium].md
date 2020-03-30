@@ -37,7 +37,7 @@ public:
     vector<int> topKFrequent(vector<int>& nums, int k) {
         unordered_map<int,int> m;
         vector<int> ans;
-        vector<PAIR> v;
+        vector<PAIR> v;	//使用push_back()时不要设定初始大小,否则前面会存在 n 个 0
         for(int i = 0; i < nums.size(); ++i) 
             m[nums[i]]++;
         for(auto it:m) 
